@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind and daisy ui -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/9dc7153475.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Summer Sale</title>
+    <style>
+      .font-san {
+        font-family: "Work Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-san">
+    <main>
+      <section class="hero-section">
+        <div class="hero min-h-screen bg-[#F9F6E2]">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <img src="/images/Summer 1.png" class="max-w-md" />
+            <div class="mr-5">
+              <h2 class="font-medium text-black text-2xl text-center">
+                --SALE FEVER--
+              </h2>
+                Purchase TK 200 or <br />
+                above & get
+                <span class="text-[#E527B2]">20% off</span>
+              </h1>
+              <div class="flex items-center justify-center">
+                <p class="text-xl">Use Promo Code</p>
+                <p
+                  id="couponId"
+                  class="bg-[#E527B2] text-white mx-2 px-2 py-1 rounded-md"
+                >
+                  SELL200
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="product-section bg-[#F8F8F8]">
+        <div class="flex md:gap-2 lg:gap-5 w-10/12 mx-auto py-16">
+          <div class="products grid grid-cols-3 gap-5">
+            <div class="products-items col-span-3">
+              <h1 class="font-semibold text-2xl my-4">Kitchenware</h1>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:2 gap-4"
+              >
+                <div
+                  onclick="spoonCard()"
+                  class="card card-compact w-52 lg:w-64 bg-base-100 drop-shadow-md p-4 h-80"
+                >
+                  <figure class="bg-gray-400 rounded-b-xl p-4">
+                    <img
+                      src="/images/prod1.png"
+                      alt="Shoes"
+                      class="bg-gray-400"
+                    />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <div class="rating rating-md">
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                    </div>
+                    <h2 id="spoon" class="card-title text-md font-semibold">
+                      K. Accessories
+                    </h2>
+                    <p id="spoon-price" class="text-gray-500 text-lg">
+                      39.00 TK
+                    </p>
+                  </div>
+                </div>
+                <div
+                  onclick="cuttingBoard()"
+                  class="card card-compact w-52 lg:w-64 bg-base-100 drop-shadow-md p-4 h-80"
+                >
+                  <figure class="bg-gray-400 rounded-b-xl p-4">
+                    <img
+                      src="/images/prod2.png"
+                      alt="Shoes"
+                      class="bg-gray-400"
+                    />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <div class="rating rating-md">
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                    </div>
+                    <h2
+                      id="cutting-board"
+                      class="card-title text-md font-semibold"
+                    >
+                      K. Accessories
+                    </h2>
+                    <p id="board-price" class="text-gray-500 text-lg">
+                      25.00 TK
+                    </p>
+                  </div>
+                </div>
+                <div
+                  onclick="cooker()"
+                  class="card card-compact w-52 lg:w-64 bg-base-100 drop-shadow-md p-4 h-80"
+                >
+                  <figure class="bg-gray-400 rounded-b-xl p-4">
+                    <img
+                      src="/images/prod3.png"
+                      alt="Shoes"
+                      class="bg-gray-400"
+                    />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <div class="rating rating-md">
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                    </div>
+                    <h2 id="cooker" class="card-title text-md font-semibold">
+                      Home Cooker
+                    </h2>
+                    <p id="cooker-price" class="text-gray-500 text-lg">
+                      49.00 TK
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2nd products -->
+
+            <div class="products-items col-span-3">
+              <h1 class="font-semibold text-2xl my-5">Sportswear</h1>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:2 gap-4"
+              >
+                <div
+                  onclick="sportsCap()"
+                  class="card card-compact w-52 lg:w-64 bg-base-100 drop-shadow-md p-4 h-80"
+                >
+                  <figure class="bg-gray-400 rounded-b-xl p-4">
+                    <img
+                      src="/images/prod4.png"
+                      alt="Shoes"
+                      class="bg-gray-400"
+                    />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <div class="rating rating-md">
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                    </div>
+                    <h2
+                      id="sports-cap"
+                      class="card-title text-md font-semibold"
+                    >
+                      Sports Back Cap
+                    </h2>
+                    <p id="cap-price" class="text-gray-500 text-lg">49.00 TK</p>
+                  </div>
+                </div>
+                <div
+                  onclick="jerseySet()"
+                  class="card card-compact w-52 lg:w-64 bg-base-100 drop-shadow-md p-4 h-80"
+                >
+                  <figure class="bg-gray-400 rounded-b-xl p-4">
+                    <img
+                      src="/images/prod5.png"
+                      alt="Shoes"
+                      class="bg-gray-400"
+                    />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <div class="rating rating-md">
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                    </div>
+                    <h2
+                      id="jersey-set"
+                      class="card-title text-md font-semibold"
+                    >
+                      Full Jersey Set
+                    </h2>
+                    <p id="set-price" class="text-gray-500 text-lg">69.00 TK</p>
+                  </div>
+                </div>
+                <div
+                  onclick="sportsCates()"
+                  class="card card-compact w-52 lg:w-64 bg-base-100 drop-shadow-md p-4 h-80"
+                >
+                  <figure class="bg-gray-400 rounded-b-xl p-4">
+                    <img
+                      src="/images/prod6.png"
+                      alt="Shoes"
+                      class="bg-gray-400"
+                    />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <div class="rating rating-md">
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        type="radio"
+                        name="rating-6"
+                        class="mask mask-star-2 bg-orange-400"
+                      />
+                    </div>
+                    <h2
+                      id="sports-cates"
+                      class="card-title text-md font-semibold"
+                    >
+                      Sports cates
+                    </h2>
+                    <p id="cates-price" class="text-gray-500 text-lg">
+                      159.00 TK
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar grid grid-cols-1 col-span-1">
+            <div>
+              <div class="p-4 h-fit mt-16 bg-white rounded-lg">
+                <h1 class="pb-4">Have coupon?</h1>
+                <div class="form-control">
+                  <div class="input-group">
+                    <input
+                      id="coupon-field"
+                      type="text"
+                      placeholder="Coupon code"
+                      class="input input-bordered w-48"
+                    />
+                    <button
+                      onclick="applyCoupon()"
+                      id="applyButton"
+                      class="btn btn-square bg-[#E527B2] text-white border-none px-5 w-fit"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 h-fit bg-white rounded-lg mt-10">
+                <div>
+                  <ul id="itemsName" class="list-decimal list-inside"></ul>
+                </div>
+                <hr class="my-5" />
+                <div>
+                  <h1>
+                    Total Price :
+                    <span class="text-gray-400"
+                      ><span id="total-price">00</span> TK</span
+                    >
+                  </h1>
+                  <h1>
+                    Discount :
+                    <span class="text-gray-400"
+                      ><span id="discount">00</span> TK</span
+                    >
+                  </h1>
+                  <h1>
+                    Total :
+                    <span class="text-gray-400"
+                      ><span id="total">00</span> TK</span
+                    >
+                  </h1>
+                </div>
+                <hr class="mt-5" />
+
+                <button
+                  id="purchase"
+                  class="btn py-4 bg-[#E527B2] text-white mt-5 rounded-lg w-full"
+                  onclick="my_modal_5.showModal()"
+                >
+                  Make Purchase
+                </button>
+                <dialog
+                  id="my_modal_5"
+                  class="modal modal-bottom sm:modal-middle"
+                >
+                  <form method="dialog" class="modal-box">
+                    <img src="./images/congo.png" alt="" class="mx-auto" />
+                    <h3 class="font-bold text-4xl flex justify-center pt-5">
+                      Congratulations
+                    </h3>
+                    <p class="py-4 text-gray-400 flex justify-center">
+                      Your Purchase the product
+                    </p>
+                    <div class="modal-action">
+                      <button
+                        class="btn bg-[#E527B2] text-white rounded-lg mx-auto"
+                        onclick="window.location.href='index.html'"
+                      >
+                        Go Home
+                      </button>
+                    </div>
+                  </form>
+                </dialog>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/price.js"></script>
+    <script src="js/coupon.js"></script>
+    <script src="js/purchaes.js"></script>
+  </body>
+</html>
